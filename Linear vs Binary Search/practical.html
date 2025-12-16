@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear vs Binary Search</title>
+</head>
+
+<body>
+
+
+    <h1>Binary Search</h1>
+
+    <script>
+        let arr = [2, 4, 6, 8, 9];
+        let target = 90;
+
+        function binarysearch(arr, target) {
+
+            let start = 0;
+            let end = arr.length - 1;
+
+            while (start <= end) {
+
+                let mid = Math.floor((start + end) / 2);
+
+                if (arr[mid] == target) {
+                    console.log("Element found at index " + mid);
+                    return;
+                }
+                else if (arr[mid] < target) {
+                    start = mid + 1;
+                } else {
+                    end = mid - 1;
+                }
+
+            }
+
+            console.log("Element not found");
+
+        }
+
+
+        binarysearch(arr, target)
+
+    </script>
+
+
+
+
+
+
+
+    <!-- 
+    <h1>Linear search</h1>
+
+
+    <script>
+
+        let arr = [2, 4, 52, 42, 464, 253, 24];
+        let target = 52;
+
+        function linearsearch(arr, target) {
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == target) {
+                    console.log("Element found at index " + i);
+                    return;
+                }
+            }
+            console.log("Element not found");
+
+
+        }
+
+        linearsearch(arr, target);
+
+    </script> -->
+
+
+
+</body>
+
+</html>
